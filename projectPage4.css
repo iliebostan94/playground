@@ -1,0 +1,656 @@
+html{
+    height: 100%;
+}
+body {
+    height: 100%;
+    width: 99%;
+    font-family: 'New Rocker', cursive;
+    background-image: linear-gradient(to right, #1b1b1b, #424242);
+
+}
+.mainPage {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: [firstRow]64px [secondRow]1.5fr [thirdRow]0.5fr [forthRow]1.1fr [fifthRow]1.6fr [sixthRow]1.1fr [seventhRow]1.1fr [eighthRow]0.4fr [ninthRow]1.5fr;
+}
+.firstRow{
+    grid-column: 1 / span 12;
+    grid-row: firstRow;
+}
+.secondRow{
+    grid-column: 1 / span 12;
+    grid-row: secondRow;
+    margin-bottom: 10px;
+}
+.thirdRow{
+    grid-column: 1 / span 12;
+    grid-row: thirdRow;
+    margin-bottom: 10px;
+    background-color: #484848;
+    text-align: center;
+}
+.forthRowFirstColumn{
+    grid-column: 1 / span 7;
+    grid-row: forthRow;
+    margin-bottom: 10px;
+}
+.forthRowSecondColumn{
+    grid-column: 8 / span 5;
+    grid-row: forthRow;
+    margin-bottom: 10px;
+}
+.fifthRow{
+    grid-column: 1 / span 12;
+    grid-row: fifthRow;
+    background-color: #484848;
+    margin-bottom: 10px;
+}
+.sixthRow{
+    grid-column: 3 / span 8;
+    grid-row: sixthRow;
+    margin-bottom: 10px;
+}
+.seventhRowFirstColumn {
+    grid-column: 1 / span 5;
+    grid-row: seventhRow;
+    background-color: #484848;
+    margin-bottom: 10px;
+}
+.seventhRowSecondColumn {
+    grid-column: 6 / span 7;
+    grid-row: seventhRow;
+    margin-bottom: 10px;
+}
+.eighthRow {
+    grid-column: 1 / span 12;
+    grid-row: eighthRow;
+}
+.ninthRow {
+    grid-column: 1 / span 12;
+    grid-row: ninthRow;
+}
+.navBar {
+    float: left;
+    width: 100%;
+    margin: 0px 0px;
+    font-family: Arial;
+    text-decoration: none;
+    overflow: hidden;
+    background-color: #333;
+}
+.navBar a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding: 20px 20px;
+}
+.navBar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.navBar li {
+    float: left;
+    border-right: 5px;
+}
+.navBar li:hover {
+background-color: #1b1b1b;
+}
+#home {
+    background-color: rgba(255, 0, 0, 0.6);
+    margin: 0px 0px;
+}
+.navBar .dropdown {
+    float: right;
+    overflow: hidden;
+}
+.navBar .dropdown .dropdownContent {
+    float: none;
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.navBar .dropdown .dropdownContent a {
+    float: none;
+    display: block;
+    color: rgba(255, 0, 0, 0.6);
+    background-color: #1b1b1b;
+    padding: 20px 20px;
+    text-align: left;
+}
+.navBar .dropdown:hover .dropdownContent {
+    display: block;
+}
+.navBar .dropdown .dropdownContent a:hover {
+    background-color: #484848;
+}
+.loginSide{
+    display: block;
+    float: right;
+    margin: 10px 20px;
+}
+.navBar input[type=text]{
+    padding: 8px;
+    margin: 5px 0px;
+    font-size: 15px;
+    border: none;
+    border-radius: 9px;
+    width:140px;
+    font-family: Arial;
+}
+.navBar .loginSide button {
+    float: right;
+    padding: 8px;
+    margin: 5px 5px;
+    background-color: #555;
+    color: white;
+    font-size: 15px;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    font-family: Arial;
+}
+.navBar .loginSide button:hover {
+    background-color: rgba(255, 0, 0, 0.6);
+}
+
+.secondRowItems{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+.secondRowImage {
+    background-image: url("https://metallica-res.cloudinary.com/image/upload/v1556645333/Photos/Live%20Photos/29092/20180429_001036_7549_1041044.jpg");
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.searchBox {
+    align-self: center;
+    position: absolute;
+    background: rgba(255, 0, 0, 0.6);
+    margin-top: 110px;
+    border-radius: 40px;
+    padding: 10px;
+    box-shadow: 0 0 25px 0 rgba(255, 0, 0, 0.9),
+    0 20px 25px 0 rgba(0, 0, 0, 0.2);
+}
+.searchTxt {
+    font-family: 'New Rocker', cursive;
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0px;
+    color: white;
+    font-size: 16px;
+    transition: 0.8s;
+    line-height: 40px;
+    width: 0px;
+    font-weight: bold;
+    opacity: 0.8;
+}
+.fa-search {
+    padding: 10px;
+    font-size: 15px;
+    margin: 5px 15px;
+    border-radius: 20px;
+    color: white;
+}
+.searchBox:hover .searchTxt {
+    width: 240px;
+}
+.searchBox:hover .fa-search {
+    background-color: black;
+    color:white;
+}
+.thirdRow h2{
+    font-size: 32px;
+    color: white;
+    -moz-user-select: none;
+}
+.thirdRow a{
+    font-size: 24px;
+    font-family: Arial;
+    text-decoration: none;
+    border: 2px solid #1b1b1b;
+    padding: 10px;
+}
+.thirdRow a:visited{
+    color: #1b1b1b;
+}
+.thirdRow a:link{
+    color: #1b1b1b;
+}
+.thirdRow a:hover {
+    color: white;
+    border: 2px solid white;
+}
+
+.forthRowFirstColumn {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+}
+.forthRowFirstColumn .forthRowImage{
+    width: 100%;
+    height: 350px;
+    background-image: url("https://metallica-res.cloudinary.com/image/upload/v1556644461/Photos/albums/25000/20170210_004532_7549_968606.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-self: center;
+    position: absolute;
+    transition: 0.8s;
+}
+.forthRowFirstColumn h2{
+    position: absolute;
+    font-size: 32px;
+    text-align: center;
+    left: 20%;
+    top: 40%;
+    font-variant: small-caps;
+    color: darkgray;
+    -moz-user-select: none;
+    transition: 0.8s;
+    border: 2px solid darkgray;
+    padding: 10px;
+}
+.forthRowFirstColumn:hover .forthRowImage{
+    opacity: 0.2;
+    transform: scale(0.95);
+}
+.forthRowFirstColumn:hover {
+    background-color: rgba(255, 0, 0, 0.3);
+}
+.forthRowFirstColumn:hover h2 {
+    color: white;
+    border: 2px solid white;
+}
+.forthRowSecondColumn{
+    margin-left: 50px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #484848;
+}
+.forthRowSecondColumn h2{
+    font-size: 32px;
+    font-variant: small-caps;
+    color: white;
+    -moz-user-select: none;
+}
+.forthRowSecondColumn a:visited {
+    color: black;
+}
+.forthRowSecondColumn a:link {
+    color: black;
+}
+.fa-facebook-f:hover {
+    color: #3B5998;
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+.fa-twitter:hover {
+    color:#55ACEE;
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+.fa-google:hover{
+    color:#dd4b39;
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+.fa-instagram:hover {
+    color:#125688;
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+.fifthRowTitle h2{
+    margin-left: 50px;
+    font-size: 32px;
+    font-variant: small-caps;
+    color: white;
+    -moz-user-select: none;
+}
+.merchSection {
+    display: flex;
+    width: 100%;
+    height: 400px;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.merchItems {
+    width: 20%;
+    align-self: center;
+    border: 3px solid #616161;
+    border-radius: 0 0 50px 50px;
+    margin: 5px 5px;
+    padding: 10px;
+    transition: 0.8s;
+}
+.merchSection .merchItems a img {
+    width: 99%;
+    height: 300px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 5px 2px;
+    object-fit: cover;
+}
+.merchItemsDescript h3 {
+    padding: 5px;
+    text-align: center;
+    font-family: Arial;
+    color: darkgray;
+    -moz-user-select: none;
+}
+.merchSection .merchItems:hover {
+    border: 3px solid black;
+    transform: scale(0.95);
+}
+.merchSection .merchItems:hover img {
+    opacity: 0.6;
+}
+.merchSection .merchItems:hover h3 {
+    color: white;
+}
+
+.sixthRowNewsBox {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+.sixthRowNewsBox .sixthRowImage {
+    width: 100%;
+    height: 350px;
+    background-image: url("https://metallica-res.cloudinary.com/image/upload/v1557711541/Photos/Live%20Photos/2019-05-12-paris-photos/2019-05may12_pic01-jy.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: initial;
+    align-self: center;
+    transition: 0.8s;
+}
+.sixthRowNewsBox a {
+    position: absolute;
+    text-align: center;
+    font-size: 32px;
+    font-variant: small-caps;
+    color: white;
+    align-self: center;
+    border: 2px solid white;
+    padding: 10px;
+    text-decoration: none;
+    visibility: hidden;
+    transition: 0.8s;
+}
+.sixthRowNewsBox:hover .sixthRowImage {
+    opacity: 0.2;
+    transform: scale(0.95);
+    z-index: -1;
+}
+.sixthRowNewsBox:hover {
+    background-color: rgba(255, 0, 0, 0.3);
+}
+.sixthRowNewsBox:hover a {
+    visibility: visible;
+    color: white;
+}
+.seventhRowFirstColumn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    position: relative;
+}
+.seventhRowFirstColumnTitle{
+    position: absolute;
+    top: 10px;
+    font-size: 32px;
+    color: white;
+    font-variant: small-caps;
+    -moz-user-select: none;
+}
+.seventhRowFirstColumnFirstButton, .seventhRowFirstColumnSecondButton{
+    display: flex;
+    align-self: center;
+    margin: 30px;
+    border: 2px solid rgb(255, 0, 0);
+    border-radius: 16px 0 12px 0;
+    color: darkgray;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #484848;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.2);
+    transition: 0.5s;
+}
+.seventhRowFirstColumnFirstButton:hover, .seventhRowFirstColumnSecondButton:hover {
+    content: '\00bb';
+    color: white;
+    background-image: linear-gradient(70deg, rgba(255, 0, 0, 0.1), rgba(255, 0, 0, 0.7));
+}
+.seventhRowSecondColumnItems {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+}
+.seventhRowSecondColumnItems .seventhRowImage{
+    width: 95%;
+    height: 360px;
+    background-image: url("https://cdn.firespring.com/images/cdf1edfc-881e-4c18-aca8-991cb15d49c4.png?w=1170&token=9a9a9957e07d64f7c43dc4867989938f");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-self: center;
+    transition: 0.8s;
+}
+.seventhRowSecondColumnItems .seventhRowSecondColumnDonate{
+    position: absolute;
+    left: 30%;
+    top: 55%;
+    text-align: center;
+    font-size: 32px;
+    font-variant: small-caps;
+    color: white;
+    align-self: flex-start;
+    border: 2px solid rgba(255, 0, 0, 0.7);
+    padding: 10px;
+    text-decoration: none;
+    transition: 0.6s;
+    box-shadow: 10px 10px 10px darkred;
+    background-color: rgba(255, 0, 0, 0.9);
+
+}
+.seventhRowSecondColumnItems:hover .seventhRowImage{
+    transform: scale(0.95);
+    opacity: 0.2;
+    z-index: -1;
+}
+.seventhRowSecondColumnItems:hover {
+    background-color: rgba(255, 0, 0, 0.3);
+}
+.seventhRowSecondColumnItems:hover .seventhRowSecondColumnDonate {
+    opacity: 0.99;
+    box-shadow: 0px 0px 0px;
+    color: white;
+    border: 2px solid white;
+}
+.seventhRowSecondColumn .testClawButton {
+    position: absolute;
+    background-image: url("https://ui-ex.com/images/scratch-vector-red.png");
+    width: 30px;
+    height: 30px;
+    left: 30%;
+    top: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    visibility: hidden;
+    transition: width 0.8s, height 1.5s;
+    transition-timing-function: ease;
+}
+.seventhRowSecondColumnItems:hover .testClawButton {
+    visibility: visible;
+    transition: 7s;
+    width: 100px;
+    height: 100px;
+}
+.eighthRow .networkRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.networkRowItems {
+    margin-top: 30px;
+}
+.networkRowItems .networkRowItemEach {
+    align-self: stretch;
+    margin-left: 10px;
+}
+.networkRowItemEach:visited, .networkRowItemEach:link{
+    color: #1b1b1b;
+}
+.fa-youtube:hover {
+    background: #bb0000;
+    color: white;
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+.fa-snapchat:hover {
+    background: #fffc00;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+.eighthRow .termsAndConditionsRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    padding-bottom: 5px;
+    background-color: #484848;
+    font-family: Arial;
+}
+.termsAndConditionsRowItems {
+    align-self: stretch;
+    margin-left: 30px;
+    padding: 10px;
+    text-decoration: none;
+    color: darkgray;
+    transition: 0.7s;
+}
+.termsAndConditionsRowItems:hover{
+    color: white;
+    border-bottom: 2px solid white;
+}
+.termsAndConditionsRowItems a:visited {
+    color: darkgray;
+}
+.termsAndConditionsRowItems a:link {
+    color: darkgray;
+}
+.ninthRowImage{
+    display: flex;
+    flex-direction: row;
+}
+.ninthRow .ninthRowImage {
+    width: 100%;
+    height: 500px;
+    background-image: url("https://metallica-res.cloudinary.com/image/upload/v1556644811/Photos/Live%20Photos/28356/20180206_004220_7549_1031310.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .mainPage {
+        width: 98%;
+        grid-template-rows: [firstRow]64px [secondRow] 1fr [thirdRow] 1fr [forthRow] 1fr [fifthRow] 1fr [sixthRow] 1fr [seventhRow] 1fr [eighthRow] 1fr [ninthRow] 1fr;
+        /*         grid-template-rows: [firstRow] 0.1fr [secondRow] 0.8fr [thirdRow] 0.3fr [forthRow] 1fr [fifthRow] 1fr [sixthRow] 1fr [seventhRow] 1fr [eighthRow] 0.3fr [ninthRow] 0.8fr; */
+
+    }
+
+    .merchSection{
+        height: 500px;
+    }
+    .merchItems{
+        height: 250px;
+        width: 40%;
+    }
+    .merchSection .merchItems a img {
+        height: 200px;
+        width: 60%;
+
+    }
+
+    }
+    /*
+    .forthRowFirstColumn, .forthRowSecondColumn{
+        grid-column: 1 / span 12;
+        display: flex;
+        flex-direction: column;
+        width: 98%;
+        height: 50%;
+    }
+
+   .merchSection{
+        flex-direction: column;
+       justify-content: center;
+       align-items: stretch;
+
+    }
+   .merchItems {
+       align-self: stretch;
+        width: 50%;
+       height: auto;
+    }
+
+}
+
+
+
+
+/*@media only screen and (max-width: 1200px){
+    .firstRow, .thirdRow, .forthRow, .fifthRow{
+        grid-column: 1/ span 13;
+    }
+    .mainPage {
+        width: 98%;                   /* pentru ca sa nu apara bara orizontala!!!
+        grid-template-rows: [secondRow]2fr;
+    }
+    .secondRowItems {
+        margin: 150px 0px;
+    }
+}
+
+*/
+

@@ -1,0 +1,175 @@
+ body {
+     font-family: 'Roboto Condensed', sans-serif;
+     background-color: #ffd877;
+ }
+
+ .landingPage {
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;    /* sau se poate de scris mai pe scurt: repeat(12, 1fr); */
+     grid-template-rows: [firstRow]160px [secondRow]400px [thirdRow]auto [forthRow]80px; /*cum as putea seta marimea randurilor in loc de px? pentru a fi mai flexibil? */
+ }
+
+ .firstRow{
+      grid-column: 3/ span 8;
+      grid-row: 0 / span 1;
+      background-color: #e8b433;
+      margin: 3px;
+      padding: 3px;
+  }
+ .secondRow {
+     grid-column: 1 / 13;
+     grid-row: 2/ span 1;
+     background-image: url("https://images.unsplash.com/uploads/14123892966835548e7bd/14369636?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+     background-size: cover;
+     background-repeat: no-repeat;
+     margin: 10px 0px;
+ }
+ .thirdRow {
+     grid-column: 3/ span 8;
+     grid-row: 3/ span 1;
+     background-color: #e8b433;
+     padding: 10px 10px;
+     margin: 10px 0px;
+ }
+ .forthRow {
+     grid-column: 3/ span 8;
+     grid-row: 4/ span 3;
+     background-color: #e8b433;
+ }
+ .mainNavBar {                 /*cum e posibil de aranjat butoanele facebook si google margina stanga, logotip cu text mijloc, si input field margina dreapta?*/
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: flex-start;
+     margin: 3px;
+     padding: 3px;
+     font-variant: small-caps;
+ }
+.fa-facebook-square {
+    padding: 10px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    background: #3B5998;
+    color: white;
+    align-self: flex-start;
+}
+.fa-google{
+    padding: 10px;
+    font-size: 20px;
+    width: 20px;
+    text-align: left;
+    text-decoration: none;
+    margin: 5px 10px;
+    background: #dd4b39;
+    color: white;
+    align-self: flex-start;
+}
+
+.fa-gripfire {
+    align-self: center;
+    margin-left: 35px;
+}
+.mainNavBarItems ul {
+    margin-right: 0;
+    text-align: right;
+    align-self: flex-end;
+}
+.mainNavBarItems li{
+    list-style-type: none;
+    padding: 5px;
+}
+
+.productsRowFlexContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    justify-content: space-around;
+}
+
+.productsRowFlexItems {
+    width: 28%;
+    height: auto;
+    padding-top: 4px;
+    align-self: stretch;
+    border: lightslategray 2px solid;
+    text-align: center;
+}
+
+.footerContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    justify-content:space-evenly;
+}
+
+.footerItems {
+    width: auto;
+    height: auto;
+    align-self: flex-start;
+    margin: 5px 10px;
+    text-align: left;
+    color: lightslategray;
+}
+.footerItems h2 {
+    color: black;
+}
+.footerItems a {
+    color: lightslategray;
+    text-decoration: none;
+}
+.footerItems a:hover {
+    color: #a30909;
+    text-decoration: underline;
+}
+.contactButton {
+    margin: 5px;
+    padding: 10px;
+    text-transform: uppercase;
+    background-color: #34a50b;
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+.contactButton:hover {
+    color:#a30909;
+    background-color: white;
+}
+
+ @media only screen and (max-width: 1600px) {
+      .productsRowFlexItems img{
+         width: 100%;
+     }
+ }
+
+ /*@media only screen and (max-width: 800px) {     /*pentru telefoane mobile, de la <=800px, cum setam inaltimea (height) randurilor, pentru a cuprinde continutul randului respectiv, si a alinia cate un obiect pe rand?
+
+     .mainNavBarItems {
+         display: block;           /* posibil de utiliza display: block? atunci cand marimea ecranului e mai mica de 800px? nu functioneaza in cazul meu, chiar daca adaug min-width: 801px; mai sus
+     }
+     .productsRowFlexItems {
+
+         display: block;
+     }
+     .footerItems {
+         width: 100%;
+     }
+ }
+ */
+ @media only screen and (max-width: 1200px) and (min-width: 801px) {
+     .firstRow, .secondRow, .thirdRow, .forthRow {
+         grid-column: 2/ span 10;          /* varianta data largeste aranjarea pe colonite, dar persista o diferenta de vreo 20-30 px nu stiu de ce? adica: schimbarea nu are loc la 1200px, dar la 1180px; de ce? */
+     }
+ }
+
+ @media only screen and (max-width: 800px) {
+     .firstRow, .secondRow, .thirdRow, .forthRow {
+         grid-column: 1/ span 12;
+     }
+ }
+
+

@@ -1,0 +1,245 @@
+$myFavColor: #f9df1b;
+$myFont: 'Times New Roman', Times, serif;
+@mixin boxContent-template {
+    background-color: rgba(255, 0, 152, 0.6);
+    border: 2px solid darkgrey;
+    border-radius: 0px 30px 15px 30px;
+    padding: 15px;
+
+    h5{
+        font-family: 'Times New Roman', Times, serif;
+        color: #ff9d00;
+        font-variant: small-caps;
+        text-align: left;
+        font-size: 24px;
+        margin-left: 5px;
+    }
+    p {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color:white;
+        text-align: center;
+    }
+    
+}
+
+@mixin boxContent-onHover ($direction: all, $transformScale: scale(1.3)) {
+        &:hover{
+        transform: $transformScale;
+        background-color: rgba(255, 0, 152, 0.9);
+        transition: 0.7s;
+        box-shadow: 3px 3px 5px 5px rgba(211,211,211,1);
+        transform-origin: $direction;
+    }
+}
+
+@mixin boxContent-special ($specialColor:white){
+    background-color: rgba(8, 8, 8, 0.5);
+    padding: 20px;
+    text-align: center;
+    border: 2px solid darkgrey;
+    border-radius: 0px 30px 15px 30px;
+    color: $specialColor;
+}
+
+
+body{
+    margin:0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://farm5.static.flickr.com/4714/39803252661_5edb02e1ef_b.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.mainPage{
+    display: grid;
+    grid-template-columns: auto repeat(6, 0.5fr) 1fr; /*auto 1fr 1fr 1fr 1fr 1fr 1fr 1fr auto;*/
+    grid-template-rows: auto repeat(4, 0.5fr) repeat(3, 1fr) auto; /*auto 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr auto;*/  
+    grid-gap: 2rem;
+}
+
+.imageContainer{
+    grid-row: 2 / 3;
+    grid-column: 2 / 4;
+}
+.imageContainer .logoImage{
+    width: 330px;
+    height: 200px;
+    background-image: url("https://pentagram-production.imgix.net/5b6f4637-0d31-4d0b-91e7-2a67d71e15b7/ps_jazzatlincolncenter_01.jpg?rect=477%2C261%2C2565%2C1605&w=880&fit=crop&fm=jpg&q=70&auto=format&h=548");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    border: 2px solid darkgrey;
+    border-radius: 0px 30px 15px 30px;
+}
+
+.sideText{
+    grid-row: 3 / 4;
+    grid-column: 3 / 6;
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.sideText h3{
+    @include boxContent-special();
+}
+
+:nth-child(3){
+    @include boxContent-template();
+    @include boxContent-onHover(top);
+    grid-row: 2 / span 1;
+    grid-column: 4 / 5;
+    transition: 0.7s;
+
+}
+:nth-child(4){
+    @include boxContent-template();
+    @include boxContent-onHover(left);
+    grid-row: 4 / span 1;
+    grid-column: 2 / 3;
+    transition: 0.7s;
+
+}
+:nth-child(5){
+    @include boxContent-template();
+    @include boxContent-onHover(left);
+    grid-row: 4 / span 1;
+    grid-column: 4 / 5;
+    transition: 0.7s;
+
+}
+.boxContent:nth-child(6){
+    @include boxContent-template();
+    @include boxContent-onHover();
+    grid-row: 5 / span 1;
+    grid-column: 3 / 4;
+    transition: 0.7s;
+
+}
+.boxContent:nth-child(7){
+    @include boxContent-template();
+    @include boxContent-onHover(left);
+    grid-row: 5 / 6;
+    grid-column: 5 / 6;
+    transition: 0.7s;
+
+}
+.boxContent:nth-child(8){
+    @include boxContent-template();
+    @include boxContent-onHover(left);
+    grid-row: 6 / 7;
+    grid-column: 2 / 3;
+    transition: 0.7s;
+
+}
+.boxContent:nth-child(9){
+    @include boxContent-onHover();
+    @include boxContent-template();
+    grid-row: 6 / 7;
+    grid-column: 4 / 5;
+    transition: 0.7s;
+
+}
+.boxContent:nth-child(10){
+    @include boxContent-onHover();
+    @include boxContent-template();
+    grid-row: 7 / 8;
+    grid-column: 3 / 4;
+    transition: 0.7s;
+
+}
+.boxContent:nth-child(11){
+    @include boxContent-template();
+    @include boxContent-onHover(left);
+    grid-row: 7 / 8;
+    grid-column: 5 / 6;
+    transition: 0.7s;
+
+}
+.boxContent:nth-child(12){
+    @include boxContent-template();
+    @include boxContent-onHover(bottom left);  
+    grid-row: 8 / 9;
+    grid-column: 2 / 3;
+    transition: 0.7s;
+
+}
+.boxContent:nth-child(13){
+    @include boxContent-onHover(bottom left);
+    @include boxContent-template();
+    grid-row: 8 / 9;
+    grid-column: 4 / 5;
+    transition: 0.7s;
+
+}
+.specialBoxContent {
+    @include boxContent-onHover(left);
+    @include boxContent-special($specialColor:white);
+    grid-row: 6 / span 1;
+    grid-column: 6 / 8;
+    font-size: 24px;
+    transition: 0.7s;
+}
+.specialBoxContent h4{
+    color:white;
+    font-variant: small-caps;
+}
+
+
+@media only screen and (max-width: 980px) {
+    body{
+        width: 100%;
+        height: 100%;
+    }
+    .mainPage {
+        display: block;
+        margin: 2% 0 2% 5%;
+        width: 80%;
+        align-content: right;
+    
+    }
+    .imageContainer .logoImage{
+       width: 350px;
+       height: 200px;
+
+    }
+
+    .boxContent:nth-child(1n+0){
+        @include boxContent-onHover(bottom, scale(1.1));
+
+    }
+
+    .specialBoxContent{
+        @include boxContent-onHover(bottom, scale(1.1));
+    }
+}
+
+@media only screen and (min-width:980px) and (max-width:1480px) {
+    
+    .mainPage{
+    display: grid;
+    grid-template-columns: auto repeat(6, 0.5fr) 1fr; /*auto 1fr 1fr 1fr 1fr 1fr 1fr 1fr auto;*/
+    grid-template-rows: auto repeat(7, 0.5fr) auto; /*auto 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr auto;*/  
+    grid-gap: 1vw;
+}
+.imageContainer .logoImage{
+    width: 250px;
+    height: 150px;
+
+ }
+.specialBoxContent {
+    grid-column: 5 / 8;
+    font-size: 20px;
+}
+}
+
+
+/* .mainPage{
+    display: grid;
+    grid-template-rows: auto 0.5fr 0.5fr 1fr 1fr 1fr 1fr 1fr auto;
+    grid-template-columns: auto 1fr 1fr 1fr 1fr 1fr 1fr 1fr auto;
+    grid-gap: 2rem;*/

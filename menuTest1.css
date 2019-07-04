@@ -1,0 +1,182 @@
+html {
+    font-family: 'Abril Fatface', cursive;
+}
+
+ul {
+    list-style-type: none;
+    margin: 3%;
+    padding: 0;
+    overflow: hidden;
+    background-color: #1f3a63;
+}
+
+li {
+    float: left;
+    border-right: 1px solid white;
+
+}
+li a {
+    text-align: center;
+    color: white;
+    display: block;
+    text-decoration: none;
+    padding: 20px 20px;      /*primul padding este pentru vertical, al doilea pentru orizontal   */
+}
+
+li a:hover {
+    background-color: #0f0f0f;
+}
+
+#home {
+    background-color: #7a0949;
+}
+
+.dropdown {
+    float: right;
+    overflow: hidden;
+}
+
+.dropdownContent {
+    float: none;
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+}
+
+.dropdownContent a {
+    float: none;
+    display: block;
+    color: #7a0949;
+    padding: 20px 20px;
+    text-align: left;
+}
+.dropdownContent a:hover {
+    background-color: #e1ebef;
+}
+
+.dropdown:hover .dropdownContent {
+    display: block;
+}
+
+hr.style-two { border: 0; height: 1px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); }
+
+
+.mainSideNavBar {
+    height: auto;
+    margin-left: 2%;
+    position: fixed;
+    background-color: #b3b3b3;
+    border-radius: 20px;
+
+
+}
+
+.mainSideNavBar a{
+    display: block;
+    padding: 13px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    color: #0080ff;
+    text-decoration: none;
+
+}
+#mainButtonSideBar {
+    color: white;
+    background-color: green;
+}
+
+.mainSideNavBar a:hover {
+    background-color: black;
+    border-radius: 20px;
+}
+
+.dropdownContentSideNavBar {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    left:100%;
+    top:75%;
+}
+
+.dropdownSideNavBar:hover .dropdownContentSideNavBar {
+    display: block;
+}
+.dropdownContentSideNavBar a:hover {
+    background-color: #e1ebef;
+    text-decoration: none;
+}
+
+.textAndImageBlock {
+    display: block; /*asta nu face nimic*/
+    width: 100%;
+    height: 900px;
+
+}
+
+.textAndImageColumn {
+    display: block; /*asta nu face nimic*/
+    width: 20%;
+    float:left;
+    border: lightgrey 3px solid;
+    padding-top: 10px;
+    margin-left: 10%;
+    text-align: center;
+}
+
+.firstFlexBoxContainer {
+    display: flex;
+    width: 100%;
+    height: 800px;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    outline: solid lightgreen 8px;
+
+}
+
+.mainFlexBox {
+    width: 25%;
+    height: 85%;
+    flex-shrink: 1; /*nu stiu ce face/ cum de utilizat */
+    align-self: center;
+    text-align: center;
+    padding: 10px;
+    border:lightgrey 3px solid;
+    margin: auto;
+
+}
+
+@media only screen and (max-width: 1095px) {
+    .mainFlexBox div img{
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

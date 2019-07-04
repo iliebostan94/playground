@@ -1,0 +1,413 @@
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #e2f1f8;
+}
+.mainPage {
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: [firstRow]0.5fr [secondRow]3.3fr [thirdRow]1fr [forthRow]1fr [fifthRow]1fr [sixthRow]1fr;
+}
+.firstRow {
+    grid-column: 3/ span 8;
+    grid-row: 0 / span 1;
+    background-color: #b0bec5;
+    margin-bottom: 10px;
+}
+.secondRow{
+    grid-column: 1/ span 12;
+    grid-row: 2/ span 1;
+    margin-bottom: 10px;
+    background-image: url("https://images.unsplash.com/photo-1510082460461-62a0f312e2e6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+}
+.thirdRow {
+    grid-column: 2/ span 10;
+    grid-row: 3/ span 1;
+    background-color: #e2f1f8;
+    margin-bottom: 10px;
+}
+.forthRow {
+    grid-column: 2/ span 10;
+    grid-row: 4/ span 1;
+    background-color: #e2f1f8;
+    margin-bottom: 10px;
+}
+.fifthRow {
+    grid-column: 2/ span 10;
+    grid-row: 5/ span 1;
+    background-color: #e2f1f8;
+    margin-bottom: 10px;
+}
+.mainNavBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    font-variant: small-caps;
+    border-radius: 10px;
+}
+.mainNavBarItems {
+    align-self: flex-start;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+}
+.mainNavBarItems h2, h3 {
+    margin:5px;
+    padding: 5px;
+}
+.fa-facebook-square {
+    padding: 10px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    margin: 5px 2px;
+    background: #3B5998;
+    color: white;
+    align-self: flex-start;
+}
+.fa-google{
+    padding: 10px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    margin: 5px 10px;
+    background: #dd4b39;
+    color: white;
+    align-self: flex-start;
+}
+.fa-twitter-square {
+    padding: 10px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    margin: 5px 2px;
+    background: #55ACEE;
+    color: white;
+    align-self: flex-start;
+}
+.fa-home {
+    padding: 5px;
+    font-size: 60px;
+    width: 70px;
+    text-align: center;
+    margin: 5px 5px;
+    background: #55ACEE;
+    color: white;
+    align-self: center;
+    border-radius: 30px;
+}
+.fa-user-circle {
+    padding: 10px;
+    font-size: 25px;
+    width: 25px;
+    text-align: center;
+    margin: 5px 10px;
+    background: white;
+    color: black;
+    align-self: flex-end;
+    border-radius: 30px;
+}
+.fa-facebook-square:hover, .fa-google:hover, .fa-twitter-square:hover, .fa-user-circle:hover {
+    transform: scale(1.1) rotate(20deg);
+}
+.secondRowItems {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 290px;
+}
+.searchBox {
+    position: absolute;
+    background: #2f3640;
+    margin-top: 110px;
+    border-radius: 40px;
+    padding: 10px;
+}
+.searchTxt {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0px;
+    color: white;
+    font-size: 16px;
+    transition: 0.8s;
+    line-height: 40px;
+    width: 0px;
+    font-weight: bold;
+}
+.fa-search {
+    padding: 10px;
+    font-size: 15px;
+    margin: 5px 15px;
+    border-radius: 20px;
+    color: orangered;
+}
+ .searchBox:hover .searchTxt {
+     width: 240px;
+ }
+.searchBox:hover .fa-search {
+    background-color: lightslategray;
+}
+.secondRowItems h1{
+    font-variant: small-caps;
+    font-size: 40px;
+}
+.thirdRowFlexBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+}
+.thirdRowFlexBox h3{
+    font-variant: small-caps;
+    font-size: 20px;
+    color: black;
+    -moz-user-select: none;
+}
+/* Am incercat sa optimizez codul, dar ceva nu merge???
+.thirdRowFlexBoxItem1 .thirdRowFlexBoxItem2 .thirdRowFlexBoxItem3 .thirdRowFlexBoxItem4 {
+    order: 1;
+    width: 100%;
+    height: auto;
+    background-size: 328px 190px;
+    background-repeat: no-repeat;
+}
+.thirdRowFlexBoxItem1 {
+    background-image: url("https://images.unsplash.com/photo-1507089947368-19c1da9775ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80");
+}
+.thirdRowFlexBoxItem2 {
+    background-image: url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+}
+.thirdRowFlexBoxItem3 {
+    background-image: url("https://images.unsplash.com/photo-1489171078254-c3365d6e359f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80");
+}
+.thirdRowFlexBoxItem4 {
+    background-image: url("https://images.unsplash.com/photo-1547561993-9fe9f2af3fd4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80");
+}
+
+ */
+
+/*.thirdRowFlexBoxItem1 {
+    order: 1;
+    width: 24%;
+    height: auto;
+    background-image: url("https://images.unsplash.com/photo-1507089947368-19c1da9775ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid grey;
+    border-radius: 10px;
+}
+
+ */
+.thirdRowFlexBoxItem1 {
+    order: 1;
+    width: 24%;
+    height: auto;
+    background-image: url("https://images.unsplash.com/photo-1507089947368-19c1da9775ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 2px solid grey;
+    border-radius: 10px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    }
+.thirdRowFlexBoxItem2 {
+    order: 1;
+    width: 24%;
+    height: auto;
+    background-image: url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 2px solid grey;
+    border-radius: 10px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.thirdRowFlexBoxItem3 {
+    order: 1;
+    width: 24%;
+    height: auto;
+    background-image: url("https://images.unsplash.com/photo-1489171078254-c3365d6e359f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 2px solid grey;
+    border-radius: 10px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.thirdRowFlexBoxItem4 {
+    order: 1;
+    width: 24%;
+    height: auto;
+    background-image: url("https://images.unsplash.com/photo-1547561993-9fe9f2af3fd4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 2px solid grey;
+    border-radius: 10px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.thirdRowFlexBoxItem1:hover, .thirdRowFlexBoxItem2:hover, .thirdRowFlexBoxItem3:hover, .thirdRowFlexBoxItem4:hover {
+     opacity: 0.6;
+    transform: scale(1.06);
+}
+.forthRowFlexBox h3{
+    font-variant: small-caps;
+    font-size: 20px;
+    color: black;
+    -moz-user-select: none;
+}
+.forthRowFlexBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    align-items: stretch;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+}
+
+.forthRowFlexBoxItem1{
+    order: 1;
+    width: 24%;
+    height: auto;
+    background-image: url("https://images.unsplash.com/photo-1507652313519-d4e9174996dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 2px solid grey;
+    border-radius: 10px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.forthRowFlexBoxItem2{
+    order: 1;
+    width: 24%;
+    height: auto;
+    background-image: url("https://images.unsplash.com/photo-1533627367152-13fb70dd8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 2px solid grey;
+    border-radius: 10px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.forthRowFlexBoxItem3{
+    order: 1;
+    width: 24%;
+    height: auto;
+    background-image: url("https://images.unsplash.com/photo-1505692795793-20f543407193?ixlib=rb-1.2.1&auto=format&fit=crop&w=1323&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 2px solid grey;
+    border-radius: 10px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.forthRowFlexBoxItem4{
+    order: 1;
+    width: 24%;
+    height: auto;
+    background-image: url("https://images.unsplash.com/photo-1490225110719-148c048da5fe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 2px solid grey;
+    border-radius: 10px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.forthRowFlexBoxItem1:hover, .forthRowFlexBoxItem2:hover, .forthRowFlexBoxItem3:hover, .forthRowFlexBoxItem4:hover {
+    opacity: 0.5;
+    transform: scale(1.06);
+}
+.footerContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+.footerItems {
+    width: 33%;
+    height: auto;
+    align-self: flex-start;
+    margin: 5px 10px;
+    text-align: left;
+    color: lightslategray;
+}
+.footerItems h2 {
+    color: black;
+}
+.footerItems a {
+    color: lightslategray;
+    text-decoration: none;
+}
+.footerItems a:hover {
+    color: #a30909;
+    text-decoration: underline;
+}
+.contactButton {
+    margin: 5px;
+    padding: 10px;
+    text-transform: uppercase;
+    background-color: #34a50b;
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+.contactButton:hover {
+    color:#a30909;
+    background-color: white;
+}
+
+@media only screen and (max-width: 768px) {
+    .firstRow, .thirdRow, .forthRow, .fifthRow{
+        grid-column: 1/ span 13;
+    }
+    .thirdRowFlexBox, .forthRowFlexBox {
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+    }
+    .thirdRowFlexBoxItem1, .thirdRowFlexBoxItem2, .thirdRowFlexBoxItem3, .thirdRowFlexBoxItem4, .forthRowFlexBoxItem1, .forthRowFlexBoxItem2, .forthRowFlexBoxItem3, .forthRowFlexBoxItem4 {
+        align-self: stretch;
+        width: 100%;
+        height: auto;
+    }
+}
+@media only screen and (max-width: 1200px){
+    .firstRow, .thirdRow, .forthRow, .fifthRow{
+        grid-column: 1/ span 13;
+    }
+    .mainPage {
+        width: 98%;                   /* pentru ca sa nu apara bara orizontala!!! */
+        grid-template-rows: [secondRow]2fr;
+    }
+    .secondRowItems {
+        margin: 150px 0px;
+    }
+}
+
+

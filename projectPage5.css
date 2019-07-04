@@ -1,0 +1,108 @@
+body{
+    font-family: 'Ubuntu', sans-serif;
+    width: 70%;
+    height: 70%;
+    transform: rotate(-45deg);
+}
+
+.mainPage {
+    display: grid;
+    grid-template-columns: auto 0.5fr 1fr 1fr 1fr 0.5fr;
+    grid-template-rows: auto 1fr 1fr 1fr 0.5fr;
+    grid-gap: 1rem;
+    margin: 5rem 0 0 10rem;
+}
+
+.headTitle {
+    grid-column: 3 / span 2;
+    grid-row: 1 / span 1;
+    display: flex;
+    justify-content: flex-end;
+}
+.headTitle h2 {
+    border-bottom: 5px solid darkgray;
+    text-align: right;
+    font-size: 36px;
+    margin-bottom: 0px;
+}
+
+.mainTitle {
+    grid-column: 4 / span 1;
+    grid-row: 2 / span 2;
+    writing-mode: vertical-lr;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.mainTitleFirst h2 {
+    margin-right: 0px;
+    font-size: 54px;
+    color: darkred;
+    padding: 5px 0 5px 0px;
+
+}
+.mainTitleSecond h3 {
+    align-self: flex-start;
+    font-size: 24px;
+    color: #424242;
+    margin: 50px -32px 0px 5px;
+}
+
+.rightSideAds {
+    grid-column: 5;
+    grid-row: 3;
+}
+.rightSideAds h4{
+    border: 5px solid darkred;
+    margin-left: 0px;
+    padding: 5px;
+    text-align: left;
+}
+
+.referencesSide{
+    grid-column: 3 ;
+    grid-row: 3 / span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.referencesSide a{
+    text-decoration: none;
+}
+.referencesSide a:visited, a:link{
+    color: black;
+}
+.referencesSide a:hover{
+    border: 3px solid darkred;
+    transform: scale(1.10);
+}
+
+.referencesItems{
+    transition: 1.5s;
+}
+
+.referencesItems h4 {
+    align-self: flex-end;
+    margin: 5px;
+    border-bottom: 5px solid black;
+}
+
+.greenLineBorder {
+    grid-column: 1 / span 6;
+    grid-row: 5;
+    margin: 10px;
+    padding: 10px;
+    background-color: darkred;
+}
+
+@media only screen and (max-width: 1200px) {
+    body{
+        width: 100%;
+        height: auto;
+        transform: rotate(0deg);
+    }
+    .mainPage {
+        margin: 0rem;
+    }
+}
