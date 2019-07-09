@@ -6,6 +6,8 @@ body{
 h1{
     color: white;
     text-align: center;
+    background-color: steelblue;
+    margin: 0px;
 }
 .displayButtonsContainer{
     display: flex;
@@ -14,7 +16,19 @@ h1{
     flex-flow: row wrap;
     align-content: center;
 }
-.displayButtons{
+.resetButton{
+    background-color: rgb(236, 171, 5);
+    color: black;
+    font-size: 18px;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 30%;
+    text-transform: uppercase;
+}
+.selected{
+    background-color: blue;
+}
+.displayButtons {
     align-self: center;
     color: white;
     padding: 15px;
@@ -25,8 +39,7 @@ h1{
     display: flex;
     flex-flow: row wrap;
     max-width: 600px;
-    margin: 0 auto;    
-
+    margin: 0 auto;
 }
 
 .colorSquare{
