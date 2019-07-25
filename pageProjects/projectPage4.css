@@ -72,6 +72,7 @@ body {
 .navBar {
     float: left;
     width: 100%;
+    line-height: 3.5;
     margin: 0px 0px;
     font-family: Arial;
     text-decoration: none;
