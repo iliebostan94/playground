@@ -3,11 +3,11 @@ alert("something");
 });
 */
 
-$("li").click(function(){
+$("ul").on("click", "li", function(){
 $(this).toggleClass("completed");
 });
 
-$("span").click(function(){
+$("ul").on("click", "span", function(){
     $(this).parent().fadeOut(function(){
     $(this).remove();
     });
@@ -16,7 +16,8 @@ $("span").click(function(){
 $("input[type='text']").keypress(function(event){
     if(event.which == 13){
     var $insertBox = $(this).val();
-    $("<li>"+"<span>"+"X "+"</span>"+$insertBox+"</li>").appendTo("ul");
+    $(this).val("");
+    $("<li>"+"<span>"+"<i class='far fa-trash-alt'></i>"+"</span>"+" "+ $insertBox+"</li>").appendTo("ul");
         //alert("something");
 }});
 
