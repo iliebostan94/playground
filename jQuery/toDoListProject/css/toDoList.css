@@ -27,8 +27,8 @@ h1 i{
 }
 
 .fa-trash-alt{
-    display: inline-block;
-    width: 0%;
+    visibility: hidden;
+    width: 0;
     line-height: 1.3;
     margin: 0px 5px 0px 0px;
     text-align: center;
@@ -40,6 +40,8 @@ h1 i{
 }
 li:hover .fa-trash-alt{
     width: 40px;
+    visibility: visible;
+    transition: 0.7s;
 }
 .completed{
     color: gray;
